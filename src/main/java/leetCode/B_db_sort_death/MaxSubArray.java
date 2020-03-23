@@ -9,4 +9,14 @@ package leetCode.B_db_sort_death;
  * @Create: 2020-03-23 22:10
  */
 public class MaxSubArray {
+    //动态规划
+    public int maxSubArray(int[] nums) {
+        int[] dp=nums;
+        int result=dp[0];
+        for (int i = 1; i < dp.length; i++) {
+            dp[i]+=Math.max(dp[i-1],0);
+            result=Math.max(result, dp[i]);
+        }
+        return result;
+    }
 }
