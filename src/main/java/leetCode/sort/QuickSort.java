@@ -41,7 +41,7 @@ public class QuickSort {
 
     @Test
     public void test(){
-        int[] nums={5,1,4,2,9,6,4};
+        int[] nums={1,5,4,3,2,8,4,5,6,6,6,4,5,1,2,0};
         queickSort(nums, 0, 6);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
