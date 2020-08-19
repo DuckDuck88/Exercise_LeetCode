@@ -1,7 +1,10 @@
 package leetCode.top100;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -75,5 +78,13 @@ public class 前K个高频元素 {
             list.add(priorityQueue.remove());
         }
         return Arrays.stream(list.toArray(new Integer[list.size()])).mapToInt(Integer::valueOf).toArray();
+    }
+
+    @Test
+    public void test() {
+        Integer[] s = {5, 1, 4, 6, 2, 3, 9, 8, 7};
+        List<Integer> list = Arrays.asList(s);
+        Collections.sort(list, (o1, o2) -> o2 - o1);
+        System.out.println(list);
     }
 }
